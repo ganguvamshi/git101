@@ -1,40 +1,160 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Git 101</title>
+
+		<meta name="description" content="Introduction to Git for Beginners">
+		<meta name="author" content="ganguvamshi">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/beige.css" id="theme">
 
-		<!-- Theme used for syntax highlighted code -->
+		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+			<section>
+				<h2> Git & Github for Beginners </h2>
+				<p>
+					<small>Vamshidhar Gangu</small>
+				</p>
+				<aside class="notes">
+					Introduction Slide Notes
+				</aside>
+			</section>
+			<section>
+				<h2> Overview </h2>
+				<p class="fragment">
+					<ul>
+						<li>What is git?</li>
+						<li>Install git and create a Github account</li>
+						<li>How git works?</li>
+						<li>What is Github</li>
+						<li>Quick example using git and Github</li>
+					</ul>
+				</p>
+				<aside class="notes">
+					notes for agenda
+				</aside>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					### What is Git?
+					- Distributed version-control software 
+					- created by Linuz Torvalds, guy who invented Linux
+					- A system that keeps records of your changes 
+					- Allows for collaborative development 
+					- __Allows you to revert any changes and go back to a previous state__
+				</textarea>
+			</section>
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+						## Install git 
+						* **Linux (Debian)** 
+							- `sudo apt-get isntall git` 
+						* **Linux (Fedora)** 
+							-  `sudo yum install git`
+						* **Mac** 
+							* <http://git-scm.com/download/mac>
+						* **Windows** 
+							* <http://git-scm.com/download/win>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Initial Setup
+						### **Y**our identity
+						
+						```
+						$ git config --global user.name "Your Name"
+						$ git config --global user.email example@mail.com
+						```
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Your editor (optional)
+
+						```
+						git config --global core.editor (editor like vim, emacs etc)
+						```
+						### Enable color in git
+						```
+						git config --global color.ui auto
+
+						```
+						### Checking your settings
+						```
+						git config --list
+						```
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## **We need a remote !**
+
+						**Go to GitHub, create a rep: <https://github.com/new>**
+
+						```
+						$ git remote add origin https://github.com/<user>/<project>.git
+						```
+					</textarea>
+				</section>
+			</section>
+			<section data-markdown="slides/git_concepts.md"
+					 data-separator="^\n\n\n"
+					 data-separator-vertical="^\n\n"
+					 data-charset="iso-8859-15">
+			</section>
+			<section data-markdown="slides/basic_git_commands.md"
+					 data-separator="^\n\n\n"
+					 data-separator-vertical="^\n\n"
+					 data-charset="iso-8859-15">
+			</section>
+				</section>
 			</div>
+
+
 		</div>
 
 		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
+
 		</script>
+
 	</body>
 </html>

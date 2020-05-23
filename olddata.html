@@ -1,0 +1,71 @@
+<section>
+				<h2> Git & Github for Beginners </h2>
+				<p>
+					<small>Vamshidhar Gangu</small>
+				</p>
+				<aside class="notes">
+					Introduction Slide Notes
+				</aside>
+			</section>
+			<section>
+				<h2> Overview </h2>
+				<p class="fragment">
+					<ul>
+						<li>What is git?</li>
+						<li>Install git and create a Github account</li>
+						<li>How git works?</li>
+						<li>What is Github</li>
+						<li>Quick example using git and Github</li>
+					</ul>
+				</p>
+				<aside class="notes">
+					notes for agenda
+				</aside>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					### What is Git?
+					- Distributed version-control software 
+					- created by Linuz Torvalds, guy who invented Linux
+					- A system that keeps records of your changes 
+					- Allows for collaborative development 
+					- __Allows you to revert any changes and go back to a previous state__
+				</textarea>
+			</section>
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+						## Install git 
+						* **Linux (Debian)** 
+							- `sudo apt-get isntall git` 
+						* **Linux (Fedora)** 
+							-  `sudo yum install git`
+						* **Mac** 
+							* <http://git-scm.com/download/mac>
+						* **Windows** 
+							* <http://git-scm.com/download/win>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## **Y**our identity
+						
+						```
+						$ git config --global user.name "Sebastien Saunier"
+						$ git config --global user.email "seb@lewagon.org"
+						```
+
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## **We need a remote !**
+
+						**Go to GitHub, create a rep: <https://github.com/new>**
+
+						```
+						$ git remote add origin https://github.com/<user>/<project>.git
+						```
+					</textarea>
+				</section>
+			</section>
